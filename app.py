@@ -52,28 +52,4 @@ def main():
 
 if __name__=="__main__":
     main()
-import tkinter as tk
-
-def order_food():
-    selected_item = menu_listbox.get(menu_listbox.curselection())
-
-    print(f"Ordered: {selected_item}")
-
-app = tk.Tk()
-app.title("Food Ordering App")
-
-# Create a list of menu items
-menu_items = ["Pizza", "Burger", "Pasta", "Salad", "Sushi", "Ice Cream"]
-
-# Create a Listbox to display the menu
-menu_listbox = tk.Listbox(app)
-for item in menu_items:
-    menu_listbox.insert(tk.END, item)
-menu_listbox.pack()
-
-# Create an "Order" button
-order_button = tk.Button(app, text="Order", command=order_food)
-order_button.pack()
-
-app.mainloop()
 
