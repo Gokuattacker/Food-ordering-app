@@ -2,6 +2,8 @@ import tkinter as tk
 from tkinter import Text, Button, Label, Entry, Frame
 from auth_module import AuthenticationApp
 
+
+
 menu = {
     "Burger": 80,
     "Pizza": 35,
@@ -46,10 +48,12 @@ def update_order_text():
 
 app = tk.Tk()
 app.title("Food Ordering App")
-app.geometry("600x500")
+app.geometry("600x600")
 
 welcome_label = Label(app, text="Welcome to the Food Ordering App!")
 welcome_label.pack()
+
+auth_app = AuthenticationApp(app)
 
 menu_text = Text(app, height=10, width=30)
 menu_text.pack()
@@ -81,6 +85,5 @@ status_label.pack()
 total_button = Button(app, text="Calculate Total", command=calculate_total)
 total_button.pack()
 
-auth_app = AuthenticationApp(app)
 
 app.mainloop()
